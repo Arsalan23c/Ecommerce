@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Arsalan Store</h1>
+            <ul>
+                <li><a href="#" onclick="showAllProducts()">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <input type="text" id="searchInput" placeholder="Search products..." oninput="searchProducts()">
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="filters">
+            <h2>Filter by Price</h2>
+            <button onclick="filterProducts('low')">Below $25</button>
+            <button onclick="filterProducts('medium')">$25 - $50</button>
+            <button onclick="filterProducts('high')">Above $50</button>
+        </section>
+        <section class="products" id="products">
+            <!-- Products will be injected here by JavaScript -->
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
